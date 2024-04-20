@@ -98,7 +98,7 @@ img {
 .header-txt span {
   font-size: 30px;
   font-weight: 600;
-  color: #868b9e;
+  color: #ffffff;
 }
 
 .header-txt h1 {
@@ -182,8 +182,8 @@ h2 {
 }
 
 .portfolio-txt {
-  flex-basis: 50%;
-  text-align: left;
+  flex-basis: 100%;
+  text-align: center;
 }
 
 .portfolio__txt-label {
@@ -214,11 +214,13 @@ h2 {
 
 .portfolio-img {
   flex-basis: 50%;
-  text-align: center;
+  text-align: left;
 }
 
 .portfolio-img img {
-  width: 400px;
+  flex-basis: 40%;
+  width: 350px;
+  border-radius: 15px;
 }
 
 .skills {
