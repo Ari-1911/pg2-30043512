@@ -43,6 +43,11 @@ img {
   text-transform: uppercase;
 }
 
+.logo__image {
+  max-width: 25%;
+  margin: 8px 0 10px 0;
+}
+
 .menu .navbar ul li {
   position: relative;
   float: left;
@@ -83,10 +88,11 @@ img {
 .header-content {
   display: flex;
   flex: 1;
+  margin-top: 15px;
 }
 
 .header-txt {
-  flex-basis: 50%;
+  flex-basis: 90%;
 }
 
 .header-txt span {
@@ -96,7 +102,7 @@ img {
 }
 
 .header-txt h1 {
-  font-size: 100px;
+  font-size: 97px;
   color: #ffffff;
   line-height: 1;
   font-family: "Bebas Neue", sans-serif;
@@ -147,7 +153,12 @@ h2 {
 .about-txt p {
   color: #b3b3b3;
   font-size: 17px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.about_txt-label {
+  color: #ffffff;
+  font-size: 17px;
 }
 
 .butons a {
@@ -175,11 +186,15 @@ h2 {
   text-align: left;
 }
 
+.portfolio__txt-label {
+  color: #ffffff;
+}
+
 .portfolio-txt span {
   font-size: 18px;
   font-weight: 600;
   display: block;
-  color: #49BADA;
+  color: #49bada;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -227,14 +242,25 @@ h2 {
   padding: 50px 0;
   background: linear-gradient(
     90deg,
-    rgba(74,42,193,1) 0%,
-    rgba(78,159,215,1) 100%
+    rgba(74, 42, 193, 1) 0%,
+    rgba(78, 159, 215, 1) 100%
   );
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
+}
+
+.footer__copyright {
+  width: 191px;
+  height: 16px;
+  color: #ffffff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .link h3 {
@@ -248,6 +274,12 @@ h2 {
   font-size: 17px;
   display: block;
   margin-bottom: 10px;
+}
+
+.link__Social {
+  margin: 0 5px 0 0;
+  width: 16px;
+  height: 16px;
 }
 
 @media (max-width: 991px) {
@@ -288,6 +320,7 @@ h2 {
   .header-content {
     flex-direction: column;
     text-align: center;
+    margin-top: 15px;
   }
 
   .header-txt h1 {
@@ -337,7 +370,6 @@ h2 {
 
   .portfolio-img img {
     width: 250px;
-    
   }
 
   .skills {
