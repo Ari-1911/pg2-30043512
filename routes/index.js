@@ -1,8 +1,6 @@
 const ContactosController = require("/Controllers/ContactosController.js");
 const contactosController = new ContactosController();
 
-const indexController = require("/Controllers/indexController.js");
-
 var express = require("express");
 var router = express.Router();
 
