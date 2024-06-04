@@ -1,3 +1,4 @@
+require("dotenv").config();
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
@@ -9,7 +10,8 @@ var usersRouter = require("./routes/users");
 
 var app = express();
 
-const ContactosController = require("./controllers/ContactosController");
+const obtenerAllContactos = require("./models/ContactosModel");
+const ContactosController = require("./controllers/ContactosController.1");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

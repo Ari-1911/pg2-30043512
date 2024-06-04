@@ -1,4 +1,4 @@
-const ContactosController = require("../controllers/ContactosController");
+const ContactosController = require("../controllers/ContactosController.1");
 const contactosController = new ContactosController();
 
 const indexController = require("../controllers/indexController");

@@ -15,7 +15,7 @@ class ContactosModel {
     });
 
     this.db.run(
-      "CREATE TABLE IF NOT EXISTS contactos (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, comment TEXT, ip TEXT, fechaHora TEXT)",
+      "CREATE TABLE IF NOT EXISTS contactos (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, comment TEXT, ip TEXT, fechaHora TEXT, pais TEXT)",
       (err) => {
         if (err) {
           console.error(err.message);
@@ -24,18 +24,22 @@ class ContactosModel {
     );
   }
 
-  crearContacto(name, email, comment, ip, fechaHora) {
+  crearContacto(name, email, comment, ip, fechaHora, pais) {
     return new Promise((resolve, reject) => {
       const sql =
-        "INSERT INTO contactos (name, email, comment, ip, fechaHora) VALUES (?,?,?,?,?)";
-      this.db.exec(sql, [name, email, comment, ip, fechaHora], function (err) {
-        if (err) {
-          console.error(err.message);
-          reject(err);
+        "INSERT INTO contactos (name, email, comment, ip, fechaHora, pais) VALUES (?,?,?,?,?,?)";
+      this.db.exec(
+        sql,
+        [name, email, comment, ip, fechaHora, pais],
+        function (err) {
+          if (err) {
+            console.error(err.message);
+            reject(err);
+          }
+          console.log("Se ha insertado una fila con el ID ${this.lastID");
+          resolve(this.lastID);
         }
-        console.log("Se ha insertado una fila con el ID ${this.lastID");
-        resolve(this.lastID);
-      });
+      );
     });
   }
 

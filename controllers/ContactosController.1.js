@@ -1,10 +1,11 @@
-require("dotenv").config();
 const ContactosModel = require("../models/ContactosModel");
 const nodemailer = require("nodemailer");
-const USER_EMAIL = process.env.USER_EMAIL;
-const USER_PASS = process.env.USER_PASS;
-const USER_DESTINO1 = process.env.USER_DESTINO1;
-const USER_DESTINO2 = process.env.USER_DESTINO2;
+const {
+  USER_EMAIL,
+  USER_PASS,
+  USER_DESTINO1,
+  USER_DESTINO2,
+} = require("./ContactosController");
 
 class ContactosController {
   constructor() {
@@ -72,5 +73,4 @@ class ContactosController {
     }
   }
 }
-
-module.exports = ContactosController;
+exports.ContactosController = ContactosController;
