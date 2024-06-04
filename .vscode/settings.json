@@ -23,5 +23,14 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.CustomBrowser": "chrome",
-  "liveServer.settings.host": "localhost"
+  "liveServer.settings.host": "localhost",
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "database": "${workspaceFolder:cv}/conf/test.db",
+      "name": "nose"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
 }
