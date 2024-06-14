@@ -58,18 +58,17 @@ class ContactosController {
         }
       });
     }
-
-    obtenerIp();
-    {
-      try {
-        const response = await fetch("https://api.ipify.org?format=json");
-        const data = await response.json();
-        return data.ip; // Retorna la ip
-      } catch (error) {
-        console.error("Error al obtener la ip:", error);
-        return null; // Retorna null si hay un error
-      }
-    }
+    // Hacer una solicitud a la API de geolocalización
+    fetch("https://api.ipgeolocationapi.com/geolocate")
+      .then((response) => response.json())
+      .then((data) => {
+        const country = data.country_name;
+        // Guardar el país en la base de datos
+        // Código para almacenar el país en la base de datos
+      })
+      .catch((error) => {
+        console.error("Error al obtener la geolocalización:", error);
+      });
   }
 }
 

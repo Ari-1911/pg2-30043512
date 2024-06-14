@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum</title>
     <link rel="stylesheet" href="./css/style.css"/>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJNF9L51QY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BJNF9L51QY');
+</script>
   </head>  
  
   <body>
@@ -191,7 +200,7 @@
   
   
         
-        <form class="form" action="/form-contact" id="contactos" method="post">
+        <form class="form" action="/form-contact" id="contactos" method="POST">
           <h2 class="form-title">Formulario</h2>
           
           
@@ -205,9 +214,9 @@
           <label class="form-label" for="comment">Comentarios</label>
           <input class="form-input" type="text" id="comment" name="comment" placeholder="Ingresa tu comentario" required>
   
-          <div class="g-recaptcha" data-sitekey="6LceB-opAAAAAOL0cHufExI1XcxwPFdgvdWt8voK"></div>
-  
-          
+         
+          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+          <div class="g-recaptcha" data-sitekey="TU_SITE_KEY"></div>
   
           <input type="submit" class="form-submit" id="enviar">
   
