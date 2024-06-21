@@ -15,16 +15,19 @@ class ContactosController {
         return;
       }
       const ip = req.ip;
-      const fechaHora = new Date();
+      const fechaHora = new Date().toString();
 
-      await this.contactosModel.agregarContacto(
+      await this.contactosModel.crearContacto(
         name,
         email,
         comment,
         ip,
         fechaHora
       );
-      res.redirect("/confirmacion"); // Redireccionar a página de confirmación
+
+      const contactos = await this.contactosModel.obtenerAllContactos();
+      console.log(contactos);
+      res.send("Formulario enviado con exito"); // Redireccionar a página de confirmación
     } catch (error) {
       res.status(500).json({ error: "Error al guardar el contacto" });
     }
